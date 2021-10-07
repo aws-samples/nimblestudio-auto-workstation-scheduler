@@ -1,0 +1,7 @@
+## Requirements for the Workstation Scheduler Lambda
+
+###### Requirements with Version Specifiers ######
+boto3             >= 1.18.19       # Version with Nimble Studio API change: https://github.com/boto/boto3/blob/develop/CHANGELOG.rst#11819
+botocore          >= 1.21.19       # Version with Nimble Studio API change: https://github.com/boto/botocore/blob/develop/CHANGELOG.rst#12119
+pynamodb          >= 5.1.0         # PynamoDB
+typing-extensions >= 3.10.0.0      # Typing extensions
