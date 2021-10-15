@@ -14,3 +14,6 @@ def get_nimble_client():
 
 def get_identity_client():
     return boto3.client('identitystore', region_name=get_aws_region())
+
+def get_cloudwatch_event_client():
+    return boto3.client('events', region_name=get_aws_region())

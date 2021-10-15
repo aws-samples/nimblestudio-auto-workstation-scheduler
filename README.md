@@ -105,6 +105,14 @@ cdk deploy NimbleStudioAutoWorkstationSchedulerStack
 
 To update the Automated Workstation Launch Configuration, see the README located at `scripts/README.md` and utilize the included helper scripts.
 
+### Usage Notes
+
+The Nimble Studio Automated Workstation Scheduler will attempt to launch sessions for studio users based on configuration.
+
+Specific configuration can be disabled for users, which will prevent the scheduler from attempting to launch those sessions. Additionally, the auto launcher can be entirely disabled. See the README located at `scripts/README.md` for details on how to disable the scheduler or specific config.
+
+It is recommended to disable the Nimble Studio Automated Workstation Scheduler before executing any Studio updates with [Studio Builder](https://docs.aws.amazon.com/nimble-studio/latest/userguide/what-is-studiobuilder.html). 
+
 ### Development
 
 To add additional dependencies, for example other CDK libraries, just add

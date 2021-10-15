@@ -182,3 +182,19 @@ For help with script parameters, run the following:
 ```bash
 python3 scripts/toggle_auto_launch_for_users.py -h
 ```
+
+### Toggle Auto Launcher
+
+This is a helper script to toggle the Nimble Studio Auto Workstation Scheduler on or off.
+
+To enable the Nimble Studio Auto Workstation Scheduler, run the script from the repository directory as follows:
+
+```bash
+python3 scripts/toggle_auto_launcher.py --enable
+```
+
+To disable the Nimble Studio Auto Workstation Scheduler, run the script from the repository directory as follows:
+
+```bash
+python3 scripts/toggle_auto_launcher.py --disable
+```
