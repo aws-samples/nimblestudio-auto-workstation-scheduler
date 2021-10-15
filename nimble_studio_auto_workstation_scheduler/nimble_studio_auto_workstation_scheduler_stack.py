@@ -7,6 +7,7 @@ from aws_cdk import aws_dynamodb as dynamo
 from local_bundler import LocalBundler, get_lambda_code_dir
 
 TABLE_NAME = "nimble_studio_auto_workstation_scheduler_config"
+RULE_NAME = "NimbleStudioAutoWorkstationSchedulerRule"
 
 class NimbleStudioAutoWorkstationSchedulerStack(cdk.Stack):
 
@@ -98,7 +99,8 @@ class NimbleStudioAutoWorkstationSchedulerStack(cdk.Stack):
             self,
             "Rule",
             schedule=events.Schedule.cron(minute="0/15", hour="*", month="*", week_day="MON-FRI", year="*"),
-            description="Scheduled event to trigger the Automated Workstation Scheduler lambda"
+            description="Scheduled event to trigger the Automated Workstation Scheduler lambda",
+            rule_name=RULE_NAME
         )
 
         rule.add_target(targets.LambdaFunction(lambdaFn))
